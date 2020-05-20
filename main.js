@@ -68,7 +68,7 @@ window.onload = () => {
     input.value += result
   });
 
-  input.addEventListener('change', () => {
+  input.addEventListener('input', () => {
     results.innerHTML = input.value
     onTypeHandler()
   })
