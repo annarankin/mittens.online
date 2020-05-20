@@ -14,6 +14,8 @@
 
 #text-entry {
   padding: 1em;
+  margin: 1em;
+  box-sizing: border-box;
 }
 
 #results {
@@ -23,12 +25,13 @@
   padding: 1em;
   box-sizing: border-box;
   font-size: 1.5em;
+  word-break: break-word;
 }
 
 .mitten {
   width: 200px;
   height: 200px;
-  transform: scaleY(1.1);
+  transform: scaleY(1);
   background-color: rebeccapurple;
   border-radius: 100%;
   position: absolute;
@@ -94,13 +97,17 @@
 }
 
 @media (max-width: 730px) {
-  .mitten.right {
+  .mitten.left {
     visibility: hidden;
   }
-  .mitten.left {
-    bottom: 50px
+  .mitten.right {
+    transform: scale(0.35);
+    bottom: -30px;
+    right: 10px;
+
   }
   .mitten.typing {
-    bottom: 10px;
+    transform: scaleX(0.35) scaleY(.35);
+    bottom: -35px;
   }
 }
